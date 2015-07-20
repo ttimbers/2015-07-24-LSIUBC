@@ -1,3 +1,19 @@
+## 2015-07-24 Software Carpentry Workshop at Life Sciences Institute, UBC
+
+### Where
+University of British Columbia, Life Sciences Institute
+
+2350 Health Sciences Mall
+ 
+Room LSC-3
+
+### Important links
+
+Workshop website: http://billmills.github.io/2015-07-24-LSIUBC/
+
+General Workshop etherpad: https://etherpad.mozilla.org/2015-07-24-LSIUBC
+
+
 # workshop-template
 
 This repository is [Software Carpentry](http://software-carpentry.org)'s
