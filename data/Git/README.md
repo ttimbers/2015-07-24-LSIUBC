@@ -1,0 +1,1 @@
+Directory for the data needed for the Git lesson for 2015-07-24-LSIUBC
