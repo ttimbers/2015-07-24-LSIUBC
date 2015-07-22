@@ -182,10 +182,68 @@ who we share it with:
 
 #### Multiple Choice Questions 7 via Socrative.org (1 question)
 
-## move to handwritten notes
-
 ## History
-* history
+
+How do you save what you have been doing?? You can use the history to be a basis for 
+your script!
+
+If we want to see all the commands we used today, we simply type `history`
+
+
+For example, say we wanted to make a file called record.txt that keeps track of the date,
+the username, and the directory every time we ran our analysis pipeline so that we can 
+keep track of when, who and where the analysis was being done. We could do that by typing 
+the following commands:
+
+
+~~~
+date > record.txt
+whoami >> record.txt
+pwd >> record.txt
+cat record.txt
+~~~
+
+
+But this time consuming to type out every time. Let's use the history to grab what we just 
+typed and use that as the basis for our script.
+
+
+~~~
+history | tail -5 > make_record.sh
+nano make_record.sh
+~~~
+
+
+You might notice that this looks a bit different from the scripts we have been writing, it
+contains some extra information that might trip up the Shell. But, we can simply use our 
+editor to fix it.
+
+
+Let's try running it:
+~~~
+bash make_record.sh
+~~~
+
+
+#### Challenge Question
+
+Notice that every time we run `make_record.sh` is overwrites the previous file? How could
+we avoid this? For example, how could we specify a new name for the file every time we run
+the script? 
+
+
+Enter answers in Etherpad
+
+
+My answer:
+
+~~~
+date > $1
+whoami >> $1
+pwd >> $1
+cat $1
+~~~
+
 
 ## Finding Things
 
