@@ -1,9 +1,15 @@
 # The Unix Shell
-2015-04-30 SFU SWC workshop,
+2015-07-24 UBC SWC workshop,
 Instructor: Tiffany Timbers
 
-## Introduce the Shell
-#### Key concepts to cover
+#Introduce Software Carpentry
+
+#Checkin
+* Data downloaded and saved to Desktop?
+* Can you open the Shell (Terminal on a Mac, Gitbash on Windows, or Shell on Linux)?
+* Type `git status` and you should see `fatal: Not a git repository (or any of the parent directories): .git`
+
+# Introduce the Shell
 * Explain how the shell relates to the keyboard, the screen, the operating system, and 
 users' programs.
 * Explain when and why command-line interfaces should be used instead of graphical 
@@ -11,27 +17,92 @@ interfaces
 * Introduce Nelle Nemo
 
 ## The Filesystem
-* Open the shell
-* Explain the prompt: `$`
-* Example command: `whomami`
-* Another example: `pwd` and explain why not `whereami`
-* Go to image of filesystem and explain root directory there, then at the shell
-* Get students to navigate to the `nelle` directory in finder/explorer and open a Shell
-window there
-* Do `pwd` again and compare differences between two different windows
-* Close first Shell window and continue to work in window open in the `nelle` directory
-* Introduce `ls` and `ls -F`
-* Introduce how to get documentation (e.g., `man ls` or `ls --help`) or google!
-* Look in `data` directory via: `ls -F data` and explain command, argument and directory/
-filename in CLI call
+Open the shell & explain the prompt: `$`
+
+
+Read, evaluate, print loop example:
+~~~
+whomami
+~~~
+
+Another example, we can see where we are in the filesystem by typing:
+~~~
+pwd
+~~~
+
+Explain root directory in the Shell `pwd` output. Then go to filesystem and show it there.
+Also, draw on whiteboard.
+
+How do we see what is in the directory we are in? Use the list command:
+~~~
+ls
+~~~
+
+How do we navigate the filesystem? Use the change directory command:
+~~~
+cd Desktop
+~~~
+
+Now when we ask what our present working directory is we get:
+~~~
+/Users/tiffanytimbers/Desktop
+~~~
+
+Let's use these skills to navigate to the `nelle` directory in the data we downloaded 
+(note - you might need to unzip the folder you downloaded). It should be here:
+~~~
+/Users/tiffanytimbers/Desktop/data/Shell/nelle
+~~~
+
+Let's take a look at what is in the `nelle` directory using the list command again:
+~~~
+ls
+~~~
+
+There's quite a few things in this directory, we can see which are files and which are
+folders using the -F flag/option
+~~~
+ls -F
+~~~
+
+There are also hidden files & directories, we can see them using the -a flag
+~~~
+ls -a
+~~~
+
+To learn what other options you can use with a command, you can look at the documentation.
+You can do this one of two ways, depending on the Shell you are using. 
+~~~
+man ls
+~~~
+or 
+~~~
+ls --help
+~~~
+
+note - if you use the `man` command, you need to type `q` to exit the documentation screen.
+
+
+Let's move into the molecules directory using `cd`
+~~~
+cd
+~~~
+
+How do we get back to the `nelle` directory? Let's take a look at the hidden files in this
+directory:
+~~~
+ls -a -F
+~~~
+
+We can see two weirdly named directories named `./` and `../` - these are the relative 
+paths to the current and parent directory, respectively. We can use them to move to the 
+`nelle` directory:
+~~~
+cd ..
+~~~
+
 * Discuss relative versus absolute path
-* Introduce `cd` via `cd data`
-* Show where we moved to: `pwd` and what is in that directory: ls -F
-* How do we move back up to `nelle`? Two ways - discuss absolute and relative path again.
-* What is `..`? 
-* Show `ls -a`
-* We see `.` (current directory), `..` (parent directory), and `.bash_profile` (file 
-usually containing settings to customize the shell)
+
 * Introduce tab completion via navigating into `cd north-pacific-gyre` and `cd 2012-07-03`
 
 #### Multiple Choice Questions 1 & 2 via Socrative.org (2 questions)
